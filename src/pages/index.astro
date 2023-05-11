@@ -1,16 +1,33 @@
 ---
+import { Image } from "@astrojs/image/components";
+import Logo from "../assets/logo.gif";
+
 const organization = "Margarine Dev";
 ---
 
-<html lang="en">
+<html class="h-full" lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <title>Coming Soon | {organization}</title>
   </head>
-  <body>
-    <h1>Coming Soon...</h1>
-    <span>{organization}</span>
+  <body
+    class="h-full flex flex-col justify-center items-center bg-slate-400 dark:bg-slate-800 dark:text-white"
+  >
+    <Image
+      class="mt-auto"
+      src={Logo}
+      width={200}
+      height={200}
+      alt={`${organization} Logo`}
+    />
+    <h1 class="mt-3 text-4xl">Coming Soon...</h1>
+    <a
+      href="https://github.com/MargarineDev"
+      target="_blank"
+      class="mt-auto mb-5 text-xl underline hover:text-amber-500"
+      >{organization}</a
+    >
   </body>
 </html>
