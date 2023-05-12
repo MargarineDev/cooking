@@ -1,6 +1,7 @@
 ---
 import { Image } from "@astrojs/image/components";
 import Logo from "../assets/logo.gif";
+import "../styles/global.css"
 
 const organization = "Margarine Dev";
 ---
@@ -22,11 +23,11 @@ const organization = "Margarine Dev";
       height={200}
       alt={`${organization} Logo`}
     />
-    <h1 class="mt-4 text-4xl">Coming Soon...</h1>
+    <h1 class="mt-4 text-4xl font-inter">Coming Soon...</h1>
     <a
       href="https://github.com/MargarineDev"
       target="_blank"
-      class="mt-auto mb-5 text-xl underline hover:text-amber-500"
+      class="mt-auto mb-5 text-xl underline font-inter hover:text-amber-500"
       >{organization}</a
     >
   </body>
