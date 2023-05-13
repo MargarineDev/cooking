@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+const { class: className } = Astro.props;
 const heroMottos = 
   [
     "Hol'up... let 'em cook.",
@@ -13,6 +14,6 @@ const heroMottos =
 
 ---
 
-<hero-motto>
-    <h2 class="font-interItalic">{heroMottos[Math.floor(Math.random() * heroMottos.length)]}</h2>
-</hero-motto>
+<div class={className}>
+    <h2 class="font-interItalic text-lg md:text-2xl">{heroMottos[Math.floor(Math.random() * heroMottos.length)]}</h2>
+</div>
