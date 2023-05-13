@@ -1,9 +1,12 @@
 ---
 import { Image } from "@astrojs/image/components";
+import { Icon } from 'astro-icon';
 import Logo from "../assets/logo.png";
+import Motto from "../components/Motto.astro";
 import "../styles/global.css"
 
 const organization = "Margarine Dev";
+
 ---
 
 <html class="h-full" lang="en">
@@ -16,19 +19,31 @@ const organization = "Margarine Dev";
   <body
     class="h-full flex flex-col justify-center items-center bg-slate-400 dark:bg-slate-800 dark:text-white dark:bg-gradient-to-t from-[#201d39] to-[#151123]"
   >
+  <div class="flex flex-col justify-center items-center mt-auto">
     <Image
-      class="mt-auto"
-      src={Logo}
-      width={200}
-      height={200}
-      alt={`${organization} Logo`}
-    />
-    <h1 class="mt-4 text-4xl font-inter">Cooking Soon...</h1>
-    <a
+    class="mt-auto"
+    src={Logo}
+    width={200}
+    height={200}
+    alt={`${organization} Logo`}
+  />
+  <h1 class="mt-4 text-4xl font-inter">Cooking Soon...</h1>
+  <Motto />
+  </div>
+   
+    <div class="flex flex-row mt-auto mb-5 items-center">
+      <Icon name="github-mark-white" class="h-10 w-10 mr-2"/>
+      <a
       href="https://github.com/MargarineDev"
       target="_blank"
-      class="mt-auto mb-5 text-xl underline font-inter hover:text-amber-500"
-      >{organization}</a
-    >
+      class="text-xl underline font-inter hover:text-amber-500"
+      >
+      
+      {organization}
+      </a> 
+    </div>
+    
+    
+    
   </body>
 </html>

@@ -1,0 +1,18 @@
+---
+import "../styles/global.css";
+const heroMottos = 
+  [
+    "Hol'up... let 'em cook.",
+    "Adding Vitamin K...",
+    "Now without dairy!",
+    "I can't believe it's not...",
+    "Est. 1869...",
+    "Not responsible for heart related illnesses...",
+    "Approximately 717 calories per 100 grams..."
+  ]
+
+---
+
+<hero-motto>
+    <h2 class="font-interItalic">{heroMottos[Math.floor(Math.random() * heroMottos.length)]}</h2>
+</hero-motto>
