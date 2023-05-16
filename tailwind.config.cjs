@@ -4,8 +4,13 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				inter: "Inter-Regular",
-				interItalic: "Inter-Italic",
+				inter: "InterVariable",
+				interItalic: [
+					"InterVariable",
+					{
+						fontVariationSettings: '"slnt" -10'
+					}
+				]
 			}
 		},
 	},
