@@ -1,6 +1,9 @@
 ---
 import { Image } from "@astrojs/image/components";
-import Logo from "../assets/logo.gif";
+import { Icon } from "astro-icon";
+import Logo from "../assets/logo.png";
+import Motto from "../components/Motto.astro";
+import "../styles/global.css";
 
 const organization = "Margarine Dev";
 ---
@@ -8,26 +11,39 @@ const organization = "Margarine Dev";
 <html class="h-full" lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="description" content="Cooking Soon" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
-    <title>Coming Soon | {organization}</title>
+    <title>Cooking Soon | {organization}</title>
   </head>
   <body
-    class="h-full flex flex-col justify-center items-center bg-slate-400 dark:bg-slate-800 dark:text-white"
+    class="font-inter h-full flex flex-col justify-center items-center dark:text-white dark:bg-gradient-to-t from-[#201d39] to-[#151123]"
   >
-    <Image
-      class="mt-auto"
-      src={Logo}
-      width={200}
-      height={200}
-      alt={`${organization} Logo`}
-    />
-    <h1 class="mt-4 text-4xl">Coming Soon...</h1>
-    <a
-      href="https://github.com/MargarineDev"
-      target="_blank"
-      class="mt-auto mb-5 text-xl underline hover:text-amber-500"
-      >{organization}</a
-    >
+    <div class="flex flex-col justify-center items-center mt-auto">
+      <Image
+        class="mt-auto w-[200px] h-[200px]"
+        src={Logo}
+        width={300}
+        height={300}
+        format={"webp"}
+        alt={`${organization} Logo`}
+      />
+      <h1 class="mt-8 text-4xl md:text-6xl">Cooking Soon...</h1>
+      <Motto class="mt-8" />
+    </div>
+
+    <div class="flex flex-row mt-auto mb-5 items-center">
+      <Icon
+        name="github-mark"
+        class="fill-black dark:fill-white h-10 w-10 mr-2"
+      />
+      <a
+        href="https://github.com/MargarineDev"
+        target="_blank"
+        class="text-xl underline hover:text-amber-500"
+      >
+        {organization}
+      </a>
+    </div>
   </body>
 </html>

@@ -1,0 +1,25 @@
+---
+import "../styles/global.css";
+const { class: className } = Astro.props;
+---
+
+<script>
+  const heroMottos = [
+    "Hol'up... let 'em cook.",
+    "Adding Vitamin K...",
+    "Now without dairy!",
+    "I can't believe it's not...",
+    "Est. 1869...",
+    "Not responsible for heart related illnesses...",
+    "Approximately 717 calories per 100 grams...",
+  ];
+
+  // TODO: Do this on the server if we move to a SSR deployment
+  document.querySelector("#motto")!.textContent =
+    heroMottos[Math.floor(Math.random() * heroMottos.length)];
+</script>
+<div class={className}>
+  <h2 class="font-interItalic text-lg md:text-2xl" id="motto">
+    Hol'up... let 'em cook.
+  </h2>
+</div>
